@@ -2,6 +2,12 @@
 #include "point.hpp"
 #include "shapes.hpp"
 #include <vector>
+#include <cmath>
+#include <cassert>
+bool are_equal(double a, double b, double epsilon = 1e-6) {
+		return std::abs(a - b) < epsilon;
+}
+
 
 
 int main() {
@@ -19,11 +25,7 @@ int main() {
 	// Draw the picture by connecting the points
 	draw_picture(points);
 	
-	bool are_equal(double a, double b, double epsilon = 1e-6) {
-		return std::abs(a - b) < epsilon;
-}
-
-
+	
     
     Point centre(0, 0);
     Circle c(10, centre);
