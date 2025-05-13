@@ -19,5 +19,11 @@ int main() {
 	// Draw the picture by connecting the points
 	draw_picture(points);
 	
+	Point centre(0, 0);
+    	Circle c(10, centre);
+	assert(std::abs(c.area() - 314.159265) < 0.001);
+	assert(std::abs(c.circumference() - 62.831853) < 0.001);
+    	c.draw();
+	
 	return 0;
 }
