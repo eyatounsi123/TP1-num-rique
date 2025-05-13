@@ -1,24 +1,23 @@
 #include "point.hpp"
 #include "shapes/circle.hpp"
+#include "draw.hpp"
+#include <cmath>
+#include <vector>
 
 Circle::Circle(double r, Point c) : radius(r), center(c) {};
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 44830a8 (Deuxième commit)
 double Circle::circumference() {
-	return 2 * M_PI * radius;
+	return 2 * 3.14159265358979323846* radius;
 }
 double Circle::area(){
-	return M_PI * radius * radius;
+	return 3.14159265358979323846* radius * radius;
 	
 }
 void Circle::draw() {
 	std::vector<Point> points;
 		const int steps = 100; 
-		const double angle_step = 2 * M_PI / steps;
+		const double angle_step = 2 *3.14159265358979323846/ steps;
 
 		for (int i = 0; i <= steps; ++i) {
 			double angle = i * angle_step;
@@ -32,15 +31,11 @@ void Circle::draw() {
 void Circle::resize(double ratio) {
     radius = radius*ratio;
 }
-void Circle::translate((Point T){
+void Circle::translate(Point T){
 	    center.x += T.x;
 		center.y += T.y;
 }
 bool Circle::equals(Circle circle) {
-	test = radius == circle.radius;
+	bool test = radius == circle.radius;
 	return test;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 44830a8 (Deuxième commit)
