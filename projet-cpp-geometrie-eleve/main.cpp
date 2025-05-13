@@ -23,7 +23,7 @@ int main() {
 	};
 	
 	// Draw the picture by connecting the points
-	draw_picture(points);
+	//draw_picture(points);
 	
 	
     
