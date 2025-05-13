@@ -2,7 +2,8 @@
 #include "point.hpp"
 #include "shapes.hpp"
 #include <vector>
-
+#include <cassert>
+#include <cmath>
 
 int main() {
 	
@@ -46,6 +47,6 @@ int main() {
     	s2.translate(Point(10, 10));
     	s2.resize(2);
     	assert(s.equals(s2));
-	
+	s.draw();
 	return 0;
 }
