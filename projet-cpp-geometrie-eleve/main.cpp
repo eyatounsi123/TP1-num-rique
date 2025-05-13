@@ -22,7 +22,7 @@ int main() {
 
 	    Square s(Point(0, 0), Point(100, 100));
 
-    	double expected_side = 100 * sqrt(2) / 2; // side = diag / sqrt(2)
+    	double expected_side = sqrt(20000)/sqrt(2);
     	assert(std::abs(s.side() - expected_side) < 1e-6);
     	assert(std::abs(s.perimeter() - 4 * expected_side) < 1e-6);
     	assert(std::abs(s.area() - expected_side * expected_side) < 1e-6);
